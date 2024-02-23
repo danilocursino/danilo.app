@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/danilo.app/static/css/main.7435e9eb.css",
+    "main.js": "/danilo.app/static/js/main.45f5f8cc.js",
+    "index.html": "/danilo.app/index.html",
+    "main.7435e9eb.css.map": "/danilo.app/static/css/main.7435e9eb.css.map",
+    "main.45f5f8cc.js.map": "/danilo.app/static/js/main.45f5f8cc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7435e9eb.css",
+    "static/js/main.45f5f8cc.js"
+  ]
+}
