@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/danilo.app/static/css/main.7435e9eb.css",
-    "main.js": "/danilo.app/static/js/main.a05569f2.js",
-    "index.html": "/danilo.app/index.html",
-    "main.7435e9eb.css.map": "/danilo.app/static/css/main.7435e9eb.css.map",
-    "main.a05569f2.js.map": "/danilo.app/static/js/main.a05569f2.js.map"
+    "main.css": "/static/css/main.7435e9eb.css",
+    "main.js": "/static/js/main.a05569f2.js",
+    "index.html": "/index.html",
+    "main.7435e9eb.css.map": "/static/css/main.7435e9eb.css.map",
+    "main.a05569f2.js.map": "/static/js/main.a05569f2.js.map"
   },
   "entrypoints": [
     "static/css/main.7435e9eb.css",
