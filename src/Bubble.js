@@ -1,16 +1,15 @@
 import { useContext, useRef, useEffect } from 'react';
-import { FaBehance, FaGithub, FaLinkedinIn, FaRedoAlt } from "react-icons/fa";
+import { FaBehance, FaGithub, FaLinkedinIn, FaRedoAlt, FaFileAlt } from "react-icons/fa";
 
 import { BubbleContext } from './App';
 import * as utils from './Util'; 
 
 export const BubbleCanvas = (props) => {
     const { colorObj, quantity } = useContext(BubbleContext);
-    let userLang = navigator.language || navigator.userLanguage;
 
     useEffect(() => {
-        document.title = 'Danilo Fonseca | ' + utils.multilanguage('dev', userLang) + ' | PHP - WordPress - JavaScript - React (' + utils.multilanguage('construction', userLang) + ')';
-    }, [userLang]);
+        document.title = 'Danilo Fonseca | ' + utils.multilanguage('dev') + ' | PHP - WordPress - JavaScript - React (' + utils.multilanguage('construction') + ')';
+    }, []);
 
     return (
         <div style={{ backgroundColor: colorObj.colorFull }} className="bubbles">
@@ -21,26 +20,29 @@ export const BubbleCanvas = (props) => {
                     </div>
                     <div className='bubbles-control-content'>
                         <div className='bubbles-control-content-title'>
-                            <span>{utils.multilanguage('dev', userLang)}</span>
+                            <span>{utils.multilanguage('dev')}</span>
                             <h1>Danilo Fonseca</h1>
                             <h2>PHP | WordPress | JavaScript | React</h2>
                         </div>
                         <ul className='bubbles-control-content-icons'>
                             <li>
-                                <a title={utils.multilanguage('access', userLang) + ' Behance'} rel="noreferrer" target='_blank' href="https://www.behance.net/danilo_"><FaBehance /></a>
+                                <a title={utils.multilanguage('access') + ' Behance'} rel="noreferrer" target='_blank' href="https://www.behance.net/danilo_"><FaBehance /></a>
                             </li>
                             <li>
-                                <a title={utils.multilanguage('access', userLang) + ' GitHub'} rel="noreferrer" target='_blank' href="https://github.net/danilocursino"><FaGithub /></a>
+                                <a title={utils.multilanguage('access') + ' GitHub'} rel="noreferrer" target='_blank' href="https://github.net/danilocursino"><FaGithub /></a>
                             </li>
                             <li>
-                                <a title={utils.multilanguage('access', userLang) + ' LinkedIn'} rel="noreferrer" target='_blank' href="https://linkedin.net/in/danilo-"><FaLinkedinIn /></a>
+                                <a title={utils.multilanguage('access') + ' LinkedIn'} rel="noreferrer" target='_blank' href="https://linkedin.com/in/danilo-"><FaLinkedinIn /></a>
                             </li>
                             {/* <li>
-                                <a title={utils.multilanguage('access', userLang) + ' Site'} rel="noreferrer" target='_blank' href="https://danilo.app"><FaGlobeAmericas /></a>
+                                <a title={utils.multilanguage('access') + ' Site'} rel="noreferrer" target='_blank' href="https://danilo.app"><FaGlobeAmericas /></a>
                             </li> */}
                         </ul>
                         <div className='bubbles-control-content-title'>
-                            <span>{utils.multilanguage('construction', userLang)}</span><br/>
+                            <a download title={utils.multilanguage('cv')} rel="noreferrer" target='_blank' href={utils.multilanguage('cvlink')}>
+                                <button>{ utils.multilanguage('cv') }</button>
+                            </a>
+                            <span>{ utils.multilanguage('construction') }</span><br/>
                         </div>
                     </div>
                 </div>

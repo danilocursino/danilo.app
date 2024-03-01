@@ -70,10 +70,29 @@ a {
       
       &.dark {
         color: #FFF;
+
+        button {
+          color: #FFF;
+          border-color: #FFF;
+
+          &:hover {
+            background-color: #FFF;
+            color: #000;
+          }
+        }
       }
 
       &.light {
         color: #000;
+
+        button {
+          color: #000;
+          border-color: #000;
+          &:hover {
+            background-color: #000;
+            color: #FFF;
+          }
+        }
       }
       
       .bubbles-control-content {
@@ -94,13 +113,13 @@ a {
           }
           
           h1 {
-            margin: 0 0 .25em;
+            margin: 0 0 .1em;
             font-weight: 300;
             font-size: 2em;
           }
           
           h2 {
-            margin: 0;
+            margin: 0 0 .25em;
             font-weight: 300;
             font-style: italic;
             font-size: .9em;
@@ -111,6 +130,21 @@ a {
             font-weight: 300;
             font-style: italic;
             font-size: 1em;
+          }
+          
+          button {
+            background-color: transparent;
+            border-width: 0.1em;
+            border-style: solid;
+            border-radius: 10em;
+            padding: 0.5em 1.2em;
+            display: block;
+            margin: 0 auto;
+            font-weight: 300;
+            font-size: 0.5em;
+            margin-bottom: 7.5em;
+            cursor: pointer;
+            transition: 0.4s;
           }
         }
 
@@ -123,7 +157,7 @@ a {
           width: 100%;
           justify-content: center;
           flex-wrap: wrap;
-          margin-bottom: 4em;
+          margin-bottom: 0.75em;
 
           li {
             text-align: center;

@@ -1,30 +1,40 @@
-import lightOrDarkColor from '@check-light-or-dark/color'; 
+import lightOrDarkColor from '@check-light-or-dark/color';
+
+import enResume from './assets/resume-english.pdf';
+import ptResume from './assets/resume-portuguese.pdf';
 
 let translationStrings = {
     pt: {
       construction: 'Site em construção',
       access: 'Ir para o',
-      dev: 'Desenvolvedor'
+      dev: 'Desenvolvedor',
+      cv: 'Baixar CV',
+      cvlink: ptResume
     },
     en: {
       construction: 'Site under construction',
       access: 'Go to',
-      dev: 'Developer'
+      dev: 'Developer',
+      cv: 'Download resumé',
+      cvlink: enResume
     },
     de: {
       construction: 'Website im Aufbau',
       access: 'Gehen sie zu',
-      dev: 'Entwickler'
+      dev: 'Entwickler',
+      cv: 'Lebenslauf herunterladen'
     },
     fr: {
       construction: 'Site en construction',
       access: 'Aller sur',
-      dev: 'Développeur'
+      dev: 'Développeur',
+      cv: 'Télécharger le CV'
     },
     es: {
       construction: 'Sitio en construcción',
       access: 'Ir a',
-      dev: 'Desarrollador'
+      dev: 'Desarrollador',
+      cv: 'Descargar CV'
     }
 };
 
@@ -46,8 +56,9 @@ export function isColorBlack(color) {
   return (color === '#000000') ? 'black' : '';
 }
 
-export function multilanguage(key, language = 'en') {
+export function multilanguage(key) {
+  let language = navigator.language || navigator.userLanguage;
   let lang = (language.includes('pt')) ? 'pt' : ((language.includes('de')) ? 'de' : ((language.includes('fr')) ? 'fr' : ((language.includes('es')) ? 'es' : 'en')));
 
-  return translationStrings[lang][key] ?? '';
+  return translationStrings[lang][key] ?? (translationStrings['en'][key] ?? '');
 }
