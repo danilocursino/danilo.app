@@ -1,7 +1,7 @@
 {
   "name": "bubbles",
   "version": "0.1.0",
-  "homepage": "https://danilocursino.github.io/danilo.app",
+  "homepage": "https://danilo.app",
   "private": true,
   "dependencies": {
     "@check-light-or-dark/color": "^1.0.3",
