@@ -1,5 +1,5 @@
 import { useContext, useRef, useEffect } from 'react';
-import { FaBehance, FaGithub, FaLinkedinIn, FaRedoAlt, FaFileAlt } from "react-icons/fa";
+import { FaBehance, FaGithub, FaLinkedinIn, FaRedoAlt } from "react-icons/fa";
 
 import { BubbleContext } from './App';
 import * as utils from './Util'; 
@@ -8,7 +8,7 @@ export const BubbleCanvas = (props) => {
     const { colorObj, quantity } = useContext(BubbleContext);
 
     useEffect(() => {
-        document.title = 'Danilo Fonseca | ' + utils.multilanguage('dev') + ' | PHP - WordPress - JavaScript - React (' + utils.multilanguage('construction') + ')';
+        document.title = 'Danilo Cursino | ' + utils.multilanguage('dev') + ' | PHP - WordPress - JavaScript - React (' + utils.multilanguage('construction') + ')';
     }, []);
 
     return (
@@ -29,14 +29,11 @@ export const BubbleCanvas = (props) => {
                                 <a title={utils.multilanguage('access') + ' Behance'} rel="noreferrer" target='_blank' href="https://www.behance.net/danilo_"><FaBehance /></a>
                             </li>
                             <li>
-                                <a title={utils.multilanguage('access') + ' GitHub'} rel="noreferrer" target='_blank' href="https://github.net/danilocursino"><FaGithub /></a>
+                                <a title={utils.multilanguage('access') + ' GitHub'} rel="noreferrer" target='_blank' href="https://github.com/danilocursino"><FaGithub /></a>
                             </li>
                             <li>
                                 <a title={utils.multilanguage('access') + ' LinkedIn'} rel="noreferrer" target='_blank' href="https://linkedin.com/in/danilo-"><FaLinkedinIn /></a>
                             </li>
-                            {/* <li>
-                                <a title={utils.multilanguage('access') + ' Site'} rel="noreferrer" target='_blank' href="https://danilo.app"><FaGlobeAmericas /></a>
-                            </li> */}
                         </ul>
                         <div className='bubbles-control-content-title'>
                             <a download title={utils.multilanguage('cv')} rel="noreferrer" target='_blank' href={utils.multilanguage('cvlink')}>
